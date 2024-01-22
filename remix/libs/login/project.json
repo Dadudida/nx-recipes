@@ -6,7 +6,7 @@
   "tags": [],
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/login/**/*.{ts,tsx,js,jsx}"]
@@ -14,7 +14,7 @@
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/libs/login"],
+      "outputs": ["{workspaceRoot}/coverage/libs/login"],
       "options": {
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/libs/login"
